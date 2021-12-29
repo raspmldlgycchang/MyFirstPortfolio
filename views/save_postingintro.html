@@ -231,7 +231,7 @@
             vertical-align: middle;
             cursor:pointer;
         }
-        input[id="title"]+label{
+        input[id*="title"]+label{
             display:block;
             margin:30px;
             width:60px;
@@ -239,7 +239,7 @@
             position:relative;
             cursor:pointer;
         }
-        input[id="title"]+label>h1>a{
+        input[id*="title"]+label>h1>a{
             padding-top:50px;
             margin-left:15px;
             text-align: left;
@@ -251,7 +251,7 @@
             color:whitesmoke;
         }
         
-        input[id="title"] + label{
+        input[id*="title"] + label{
             display: inline-block;
             padding:20px;
             margin-top:70px;
@@ -269,6 +269,13 @@
             position:relative;
             padding-left: 35px;
             background:url('../public/img/blog1title.png') 0 0 / 74px no-repeat;
+            line-height:30px;
+            color:#000;
+        }
+        input[id="title2"]:checked+label[class="titlelabel"]{
+            position:relative;
+            padding-left: 35px;
+            background:url('../public/img/cafe1title.png') 0 0 / 74px no-repeat;
             line-height:30px;
             color:#000;
         }
@@ -436,7 +443,7 @@
             align-items: center;
         }
         div.links-icon{
-            width: 25%;
+            width: 20%;
             float:left;
         }
         img{
@@ -469,7 +476,7 @@
     <div class="sidebar">
         <input type="checkbox" id="title">
         <label for="title" class="titlelabel">
-            <h1><a href="#" title="클릭해서 이동">BLOG</a></h1><span class="icon"></span>
+            <h1><a href="#" title="위의 회색박스클릭해서 블로그대표메뉴보기">BLOG</a></h1><span class="icon"></span>
         </label>
 
         <input type="checkbox" id="category1">
@@ -943,6 +950,42 @@
             </label>
         </label>
 
+        <input type="checkbox" id="title2">
+        <label for="title2" class="titlelabel">
+            <h1><a href="#" title="스크롤하여 아이콘으로 MyThread카페게시글이동하기">MyThread</a></h1><span class="icon"></span>
+        </label>
+
+        <label id="testbox"><h3>자유게시판(37)<span style="font-size:1px;color: #5f5f5f;"> 여기클릭</span></h3>
+            <span class="arrowicon"></span>
+            <input type="checkbox">
+            <h2>subCategory</h2>
+            <label id="subtestbox">
+                <span class="icon"></span>
+                <span class="text"><a>C CPP WindowsDesktop Nodejs</a></span>
+            </label>
+        </label>
+
+        <input type="checkbox" id="category16">
+        <label for="category16" class="categorylabel">
+            <h3><a href="#">프로그래밍 질문하기(2)<span style="font-size:1px;">오른쪽클릭</span></a></h3><em></em>
+            <span class="arrowicon"></span>
+        </label>
+
+        <label id="testbox"><h3>김성엽님블로그 Q&A게시된 질문<span style="font-size:1px;color: #5f5f5f;"> 여기클릭</span></h3>
+            <span class="arrowicon"></span>
+            <input type="checkbox">
+            <h2>subCategory</h2>
+            <label id="subtestbox">
+                <span class="icon"></span>
+                <span class="text"><a>[Q&A]배열명에 &연산자를 붙여도 되나요?</a></span>
+            </label>
+            <br/>
+            <label id="subtestbox">
+                <span class="icon"></span>
+                <span class="text"><a></a></span>
+            </label>
+        </label>
+
         <footer class="links">
             <div class="links-icon">
                 <a href="https://gychangcp.blogspot.com/" target="_blank"><img src="../public/img/blogger.png"></a>
@@ -962,6 +1005,11 @@
             <div class="links-icon">
                 <a href="https://youtu.be/-ACcX0-ylHU" target="_blank"><img src="../public/img/youtube.png"></a>
                 <p class="links-explain">youtube</p>
+                
+            </div>
+            <div class="links-icon">
+                <a href="https://cafe.naver.com/codingdiycody" target="_blank"><img src="../public/img/cody.jpg"></a>
+                <p class="links-explain">CODY카페</p>
                 
             </div>
             
